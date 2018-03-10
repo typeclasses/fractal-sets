@@ -22,9 +22,33 @@ Library
   build-depends:    base
                   , gd>=3000.1.0
 
+Executable          mandelbrot
+  hs-source-dirs:   executables
+  Main-is:          mandelbrot.hs
+  ghc-options:      -O2 -fasm
+  build-depends:    base
+                  , fractal-sets
+                  , gd>=3000.1.0
+
 Executable           juliaset
   hs-source-dirs:    executables
   Main-is:           juliaset.hs
+  ghc-options:       -O2 -fasm
+  build-depends:     base
+                   , fractal-sets
+                   , gd>=3000.1.0
+
+Executable           burning-ship
+  hs-source-dirs:    executables
+  Main-is:           burning_ship.hs
+  ghc-options:       -O2 -fasm
+  build-depends:     base
+                   , fractal-sets
+                   , gd>=3000.1.0
+
+Executable           newtons
+  hs-source-dirs:    executables
+  Main-is:           newtons_method.hs
   ghc-options:       -O2 -fasm
   build-depends:     base
                    , fractal-sets
