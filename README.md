@@ -6,21 +6,15 @@ Author: Greg Heartsfield
 
 ## Using this package
 
-Download the package, `cd` into the directory, and 
+Download the package, `cd` into the directory, and look around. If you would like to generate the images with the current settings:
 
 ```shell
-$ stack build
+$ stack build && stack exec -- <executable-name>
 ```
 
-You can edit colors and other settings, such as image size, in any of the files in the `executables` directory. Each file is named for the type of fractal set it draws, and the file names match the executable names (see the `.cabal` file).
+You can edit colors and other settings, such as image size, in any of the files in the `executables` directory. Each file is named for the type of fractal set it draws, and the file names match the executable names (see the `.cabal` file). You need to re-run `stack build` every time you tweak settings to rebuild the executable.
 
-If you tweaked settings, you'll need to run `stack build` a second time to rebuild the executables with the current settings. To generate the image, use
-
-```shell
-$ stack exec -- <executable-name>
-```
-
-Running that will produce a file in the top level directory called <executable_name.png>. 
+Running `stack exec -- <executable-name>` produces a file in the top level directory called <executable_name.png>. 
 
 Happy fractal-ing!
 
