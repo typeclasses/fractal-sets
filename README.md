@@ -28,7 +28,7 @@ Happy fractal-ing!
 
 At [this commit](https://github.com/typeclasses/fractal-sets/commit/7fd97638564237f60afc43f0d41552db72101346), the code in the four executable files produce these images:
 
-The Julia Set we used on the Learn Nix landing page:
+The Julia Set we used on the [Learn Haskell](https://typeclasses.com/learn-haskell) page:
 
 ![juliaset](https://github.com/typeclasses/fractal-sets/blob/master/images/juliaset.png)
 
