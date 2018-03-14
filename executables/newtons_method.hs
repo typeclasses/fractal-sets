@@ -23,7 +23,7 @@ mbWindow :: Window
 mbWindow = ( (-2.0, 2.0), (2.0, -2.0) ) -- Full view
 
 main :: IO ()
-main = drawPlot drawNewton imageDim mbWindow "newtonm.png"
+main = drawPlot drawNewton imageDim mbWindow "newtons-method.png"
 
 drawNewton :: Coordinate -> Color
 drawNewton (x,y) = colorIterations $ newton (x :+ y) 0

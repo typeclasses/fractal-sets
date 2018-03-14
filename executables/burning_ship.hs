@@ -15,7 +15,7 @@ mbWindow :: Window
 mbWindow = ( (-1.8, 0.02), (-1.7, -0.08) ) -- smaller ship on horizon
 
 main :: IO ()
-main = drawPlot drawShip imageDim mbWindow "burning_ship.png"
+main = drawPlot drawShip imageDim mbWindow "burning-ship.png"
 
 drawShip :: Coordinate -> Color
 drawShip (x,y) = colorIterations $ ship (x :+ y) (0 :+ 0) 0

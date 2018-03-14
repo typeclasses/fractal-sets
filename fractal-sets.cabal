@@ -46,7 +46,7 @@ Executable           burning-ship
                    , fractal-sets
                    , gd>=3000.1.0
 
-Executable           newtons
+Executable           newtons-method
   hs-source-dirs:    executables
   Main-is:           newtons_method.hs
   ghc-options:       -O2 -fasm
