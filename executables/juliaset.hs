@@ -6,6 +6,10 @@ import Data.Complex
 
 imageDim :: Size
 imageDim = (1200, 400)
+-- 7200, 4800
+
+--imageDim :: Size
+--imageDim = (600, 600)
 
 -- How many iterations before  we declare the point doesn't diverge
 maxIter = 64
@@ -13,13 +17,21 @@ maxIter = 64
 -- Coordinates in the complex plane to graph
 -- First coordinate must be top left.
 mbWindow :: Window
-mbWindow = ( (-3,1), (3,-1) ) -- Full view
+mbWindow = ( (-3,1), (3,-1) )
+-- mbWindow = ( (-3,2), (3, -2))
+
+--mbWindow :: Window
+--mbWindow = ( (-1.5,1.5), (1.5,-1.5) ) -- Full view
 
 -- C value
 c :: Complex Double
 c = (-0.423) :+ 0.745 -- Dust
 -- c = (0.45) :+ (-0.1428)
 -- c = (0.285 :+ 0.01)
+-- c = (-0.45) :+ (-0.143) -- hazycloud
+-- c = (-0.54) :+ (0.54) -- dragon
+-- c = 0 :+ (0.8) -- veins
+-- c = 0.355 :+ (0.355) -- swirlybois
 
 main :: IO ()
 main = drawPlot drawJulia imageDim mbWindow "juliaset.png"
@@ -40,10 +52,19 @@ julia c z iter
                   then iter
                   else julia c z' (iter+1)
 
+-- original colors
+--colorIterations :: Int -> Color
+--colorIterations x
+--    | x > maxIter = rgb 255 255 255
+--    | otherwise = let c = x*4
+--                  in rgb x c x
+
+
+-- the version we used for the purple julias
 colorIterations :: Int -> Color
 colorIterations x
     | x > maxIter = rgb 255 255 255
     | otherwise = let c = 50 + x
-                      x'' = 50 + x*3 -- addition because when x was hitting zero as it iterates, we were ending up with black in the edges
+                      x'' = 50 + x*3 -- addition because to avoid fading to black
                       x' = 100 + x*2
                   in rgb x'' c x'
