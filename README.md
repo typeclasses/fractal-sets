@@ -14,6 +14,8 @@ $ stack build && stack exec -- <executable-name>
 
 You can edit colors and other settings, such as image size, in any of the files in the `executables` directory. Each file is named for the type of fractal set it draws, and the file names match the executable names (see the `.cabal` file). You need to re-run `stack build` every time you tweak settings to rebuild the executable.
 
+The `library` directory contains one file, `Plot.hs`, on which all the executables depend. We haven't touched that code.
+
 Running `stack exec -- <executable-name>` produces a file in the top level directory called <executable_name.png>. 
 
 Happy fractal-ing!
